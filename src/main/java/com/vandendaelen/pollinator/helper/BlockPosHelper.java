@@ -1,4 +1,4 @@
-package com.vandendaelen.polinator.helper;
+package com.vandendaelen.pollinator.helper;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;

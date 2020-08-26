@@ -1,4 +1,4 @@
-package com.vandendaelen.polinator.event;
+package com.vandendaelen.pollinator.event;
 
 import net.minecraft.entity.passive.BeeEntity;
 import net.minecraftforge.eventbus.api.Event;

@@ -1,4 +1,4 @@
-package com.vandendaelen.polinator.config;
+package com.vandendaelen.pollinator.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 
 @Mod.EventBusSubscriber
-public class PolinatorConfig {
+public class PollinatorConfig {
     public static ForgeConfigSpec COMMON_CONFIG;
 
     public static final String CATEGORY_GENERAL = "general";

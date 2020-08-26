@@ -1,6 +1,6 @@
-package com.vandendaelen.polinator.mixin;
+package com.vandendaelen.pollinator.mixin;
 
-import com.vandendaelen.polinator.event.BeeEntityEvent;
+import com.vandendaelen.pollinator.event.BeeEntityEvent;
 import net.minecraftforge.common.MinecraftForge;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

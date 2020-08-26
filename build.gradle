@@ -13,9 +13,9 @@ buildscript {
 
 apply plugin: 'net.minecraftforge.gradle'
 
-group = 'com.vandendaelen.polinator'
+group = 'com.vandendaelen.pollinator'
 version = '1.16.2-1.0.0'
-archivesBaseName = 'polinator'
+archivesBaseName = 'pollinatlor'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
@@ -24,7 +24,7 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
-            arg "-mixin.config=polinator.mixins.json"
+            arg "-mixin.config=pollinator.mixins.json"
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -33,7 +33,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                polinator {
+                pollinator {
                     source sourceSets.main
                 }
             }
@@ -41,7 +41,7 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
-            arg "-mixin.config=polinator.mixins.json"
+            arg "-mixin.config=pollinator.mixins.json"
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -50,7 +50,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                polinator {
+                pollinator {
                     source sourceSets.main
                 }
             }
@@ -65,10 +65,10 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'polinator', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'pollinator', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                polinator {
+                pollinator {
                     source sourceSets.main
                 }
             }
@@ -83,14 +83,14 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "polinator",
+                "Specification-Title": "pollinator",
                 "Specification-Vendor": "lotuxpunk",
                 "Specification-Version": "1", // We are version 1 of ourselves
                 "Implementation-Title": project.name,
                 "Implementation-Version": "${version}",
                 "Implementation-Vendor" :"lotuxpunk",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs": "polinator.mixins.json"
+                "MixinConfigs": "pollinator.mixins.json"
         ])
     }
 }
@@ -98,7 +98,7 @@ jar {
 apply plugin: 'org.spongepowered.mixin'
 
 mixin {
-    add sourceSets.main, "polinator.refmap.json"
+    add sourceSets.main, "pollinator.refmap.json"
 }
 
 
