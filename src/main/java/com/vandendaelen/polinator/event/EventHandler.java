@@ -25,6 +25,7 @@ public class EventHandler {
 
                 final BlockPos pos = flowerableSpots.get(rand.nextInt(flowerableSpots.size()));
                 event.beeEntity.world.setBlockState(pos, event.beeEntity.world.getBlockState(event.beeEntity.getFlowerPos()));
+                Polinator.LOGGER.debug(pos.toString());
             }
 
         }

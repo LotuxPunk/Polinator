@@ -14,7 +14,7 @@ import static com.vandendaelen.polinator.Polinator.MOD_ID;
 public class Polinator {
 
     public static final String MOD_ID = "polinator";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public Polinator() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, PolinatorConfig.COMMON_CONFIG);

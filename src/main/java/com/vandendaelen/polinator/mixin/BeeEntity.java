@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(net.minecraft.entity.passive.BeeEntity.class)
 public class BeeEntity {
 
-    @Inject(at = @At("HEAD"),  method = "Lnet/minecraft/entity/passive/BeeEntity;onHoneyDelivered()V", cancellable = false, remap = false)
+    @Inject(at = @At("HEAD"),  method = "Lnet/minecraft/entity/passive/BeeEntity;onHoneyDelivered()V", cancellable = false)
     public void onHoneyDelivered(CallbackInfo ci){
         this.setHasNectar(false);
         this.resetCropCounter();
