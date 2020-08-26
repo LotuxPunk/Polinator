@@ -13,14 +13,14 @@ import java.util.Random;
 public class EventHandler {
 
     @SubscribeEvent
-    public static void onHoneyDelivered(BeeEntityEvent.HoneyDelivered event){
+    public static void onHoneyDelivered(final BeeEntityEvent.HoneyDelivered event){
         if (event.beeEntity.hasHive()){
-            BlockPos hivePos = event.beeEntity.getHivePos();
-            ArrayList<BlockPos> flowerableSpots = BlockPosHelper.getFreeBlockInRadius(event.beeEntity.world, 4, hivePos);
+            final BlockPos hivePos = event.beeEntity.getHivePos();
+            ArrayList<BlockPos> flowerableSpots = BlockPosHelper.getFreeBlockInRadius(event.beeEntity.world, 10, hivePos);
 
             if (!flowerableSpots.isEmpty()){
-                Random rand = new Random();
-                BlockPos pos = flowerableSpots.get(rand.nextInt(flowerableSpots.size()));
+                final Random rand = new Random();
+                final BlockPos pos = flowerableSpots.get(rand.nextInt(flowerableSpots.size()));
 
                 event.beeEntity.world.setBlockState(pos, event.beeEntity.world.getBlockState(event.beeEntity.getFlowerPos()));
             }

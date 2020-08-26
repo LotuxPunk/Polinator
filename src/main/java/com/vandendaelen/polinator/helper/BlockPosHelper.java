@@ -23,7 +23,7 @@ public class BlockPosHelper {
         }
 
         return (ArrayList<BlockPos>) blockPosArrayList.stream()
-                .filter(pos -> world.isAirBlock(pos))
+                .filter(world::isAirBlock)
                 .filter(pos -> world.getBlockState(pos.add(0,-1,0)).equals(Blocks.DIRT.getDefaultState()) || world.getBlockState(pos.add(0,-1,0)).equals(Blocks.GRASS_BLOCK.getDefaultState()))
                 .collect(Collectors.toList());
     }
