@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "com.vandendaelen.polinator.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BeeEntity"
+  ],
+  "minVersion": "0.8"
+}
