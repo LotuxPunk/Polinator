@@ -12,6 +12,7 @@ buildscript {
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 
 group = 'com.vandendaelen.polinator'
 version = '1.16.2-1.0.0'
@@ -24,7 +25,7 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
-            arg "-mixin.config=nicephore.mixins.json"
+            arg "-mixin.config=polinator.mixins.json"
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -41,6 +42,7 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
+            arg "-mixin.config=polinator.mixins.json"
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -83,9 +85,13 @@ jar {
     manifest {
         attributes([
                 // Existing properties here
-                "MixinConfigs": "nicephore.mixins.json"
+                "MixinConfigs": "polinator.mixins.json"
         ])
     }
+}
+
+mixin {
+    add sourceSets.main, "polinator.refmap.json"
 }
 
 jar.finalizedBy('reobfJar')

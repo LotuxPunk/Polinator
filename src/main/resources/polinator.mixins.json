@@ -2,6 +2,7 @@
   "required": true,
   "package": "com.vandendaelen.polinator.mixin",
   "compatibilityLevel": "JAVA_8",
+  "refmap": "polinator.refmap.json",
   "mixins": [
     "BeeEntity"
   ],
